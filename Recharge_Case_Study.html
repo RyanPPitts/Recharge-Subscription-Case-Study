@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ryan Pitts - Enterprise Subscription Success</title>
+    <style>
+        @page {
+            size: 8.5in 11in;
+            margin: 0.5in;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #1a1a1a;
+            background: #ffffff;
+            font-size: 16px;
+        }
+
+        .container {
+            max-width: 100%;
+            margin: 0 auto;
+        }
+
+        /* Hero Section - Recharge Style */
+        .hero {
+            background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #ec4899 100%);
+            color: white;
+            padding: 60px 40px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="75" cy="75" r="1.5" fill="rgba(255,255,255,0.08)"/><circle cx="50" cy="10" r="0.8" fill="rgba(255,255,255,0.12)"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+            opacity: 0.4;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 24px;
+            line-height: 1.1;
+            letter-spacing: -0.02em;
+        }
+
+        .hero .subtitle {
+            font-size: 1.5rem;
+            font-weight: 400;
+            opacity: 0.95;
+            margin-bottom: 32px;
+            line-height: 1.4;
+        }
+
+        .hero .description {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            line-height: 1.6;
+            margin-bottom: 48px;
+        }
+
+        /* Impact Metrics - Large Numbers */
+        /* .impact-metrics {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 32px;
+            margin-top: 48px;
+        } */
+
+        .impact-metrics {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .metric-card {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 16px;
+            padding: 32px 24px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .metric-card:hover {
+            transform: translateY(-4px);
+        }
+
+        .metric-number {
+            font-size: 3.5rem;
+            font-weight: 900;
+            display: block;
+            margin-bottom: 8px;
+            color: #fbbf24;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .metric-label {
+            font-size: 1rem;
+            font-weight: 500;
+            opacity: 0.9;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            line-height: 1.3;
+        }
+
+        /* Main Content */
+        .main-content {
+            padding: 80px 40px;
+        }
+
+        .section {
+            margin-bottom: 80px;
+            max-width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin-bottom: 24px;
+            line-height: 1.2;
+        }
+
+        .section-subtitle {
+            font-size: 1.25rem;
+            color: #6b7280;
+            margin-bottom: 48px;
+            line-height: 1.5;
+        }
+
+        /* About Section */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            margin-bottom: 60px;
+        }
+
+        .about-text {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            color: #374151;
+        }
+
+        .about-text strong {
+            color: #1a1a1a;
+            font-weight: 600;
+        }
+
+        .about-stats {
+            background: #f8fafc;
+            border-radius: 20px;
+            padding: 40px;
+            border: 1px solid #e5e7eb;
+        }
+
+        .stat-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px 0;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .stat-row:last-child {
+            border-bottom: none;
+        }
+
+        .stat-row .label {
+            font-weight: 500;
+            color: #6b7280;
+        }
+
+        .stat-row .value {
+            font-weight: 700;
+            font-size: 1.25rem;
+            color: #6366f1;
+        }
+
+        /* Challenge & Solution Cards */
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 32px;
+            margin-top: 48px;
+        }
+
+        .challenge-card {
+            background: #fef2f2;
+            border: 2px solid #fecaca;
+            border-radius: 16px;
+            padding: 32px;
+            transition: all 0.3s ease;
+        }
+
+        .challenge-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 40px rgba(239, 68, 68, 0.1);
+        }
+
+        .solution-card {
+            background: #f0fdf4;
+            border: 2px solid #bbf7d0;
+            border-radius: 16px;
+            padding: 32px;
+            transition: all 0.3s ease;
+        }
+
+        .solution-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 40px rgba(34, 197, 94, 0.1);
+        }
+
+        .card-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+
+        .challenge-card .card-title {
+            color: #dc2626;
+        }
+
+        .solution-card .card-title {
+            color: #059669;
+        }
+
+        .card-text {
+            color: #374151;
+            line-height: 1.6;
+        }
+
+        /* Results Section */
+        .results-section {
+            background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+            color: white;
+            padding: 80px 40px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .results-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="dots" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="10" cy="10" r="1" fill="rgba(255,255,255,0.1)"/></pattern></defs><rect width="100" height="100" fill="url(%23dots)"/></svg>');
+            opacity: 0.3;
+        }
+
+        .results-content {
+            position: relative;
+            z-index: 2;
+            max-width: 1000px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .results-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin: 48px 0;
+        }
+
+        .result-item {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 16px;
+            padding: 32px;
+            text-align: center;
+        }
+
+        .result-number {
+            font-size: 3rem;
+            font-weight: 900;
+            color: #34d399;
+            display: block;
+            margin-bottom: 12px;
+        }
+
+        .result-label {
+            font-size: 1rem;
+            opacity: 0.9;
+            line-height: 1.4;
+        }
+
+        /* Quote Section */
+        .quote-section {
+            background: rgba(255, 255, 255, 0.05);
+            border-left: 4px solid #34d399;
+            border-radius: 12px;
+            padding: 40px;
+            margin: 48px 0;
+            font-style: italic;
+            font-size: 1.25rem;
+            line-height: 1.6;
+        }
+
+        /* Brands Section */
+        .brands-section {
+            background: #f8fafc;
+            padding: 80px 40px;
+        }
+
+        .brands-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .brands-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 32px;
+            margin-top: 48px;
+        }
+
+        .brand-card {
+            background: white;
+            border: 2px solid #e5e7eb;
+            border-radius: 16px;
+            padding: 32px 24px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .brand-card:hover {
+            transform: translateY(-4px);
+            border-color: #6366f1;
+            box-shadow: 0 12px 24px rgba(99, 102, 241, 0.1);
+        }
+
+        .brand-name {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #1a1a1a;
+        }
+
+        .recharge-badge {
+            background: linear-gradient(135deg, #6366f1, #8b5cf6);
+            color: white;
+            padding: 16px 32px;
+            border-radius: 50px;
+            font-weight: 700;
+            display: inline-block;
+            margin-top: 32px;
+            font-size: 1.1rem;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+            color: white;
+            padding: 80px 40px;
+            text-align: center;
+        }
+
+        .contact-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .contact-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 24px;
+        }
+
+        .contact-subtitle {
+            font-size: 1.25rem;
+            opacity: 0.9;
+            margin-bottom: 48px;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 32px;
+        }
+
+        .contact-card {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 16px;
+            padding: 32px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .contact-card:hover {
+            transform: translateY(-4px);
+        }
+
+        .contact-card h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 16px;
+        }
+
+        .contact-card a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1rem;
+        }
+
+        .contact-card a:hover {
+            text-decoration: underline;
+        }
+
+        /* Print Styles */
+        @media print {
+            body {
+                -webkit-print-color-adjust: exact;
+                color-adjust: exact;
+            }
+
+            .hero {
+                background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #ec4899 100%) !important;
+                color: white !important;
+            }
+
+            .results-section {
+                background: linear-gradient(135deg, #1e293b 0%, #334155 100%) !important;
+                color: white !important;
+            }
+
+            .contact-section {
+                background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%) !important;
+                color: white !important;
+            }
+
+            .metric-number {
+                color: #fbbf24 !important;
+            }
+
+            .result-number {
+                color: #34d399 !important;
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero {
+                padding: 40px 24px;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .main-content {
+                padding: 60px 24px;
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .impact-metrics {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 24px;
+            }
+
+            .metric-number {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Hero Section -->
+        <div class="hero">
+            <div class="hero-content">
+                <h1>Ryan Pitts</h1>
+                <p class="subtitle">Ecommerce Subscription Specialist</p>
+                <p class="description">
+                    <strong>I single-handedly transformed subscription commerce for 23 major brands,</strong> migrating
+                    400,000+ customers and generating $2.4M in annual recurring revenue through strategic implementation
+                    and technical excellence.
+                </p>
+
+                <!-- Impact Metrics -->
+                <div class="impact-metrics">
+                    <div class="metric-card">
+                        <span class="metric-number">$2.4M</span>
+                        <span class="metric-label">Annual Revenue Generated</span>
+                    </div>
+                    <div class="metric-card">
+                        <span class="metric-number">400K+</span>
+                        <span class="metric-label">Customers Migrated</span>
+                    </div>
+                    <div class="metric-card">
+                        <span class="metric-number">23</span>
+                        <span class="metric-label">Sites Launched</span>
+                    </div>
+                    <div class="metric-card">
+                        <span class="metric-number">+20%</span>
+                        <span class="metric-label">Revenue Increase</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- About Section -->
+            <div class="section">
+                <h2 class="section-title">About This Project</h2>
+                <p class="section-subtitle">A comprehensive 3-year program implementing subscription solutions for major
+                    CPG brands</p>
+
+                <div class="about-grid">
+                    <div class="about-text">
+                        <p><strong>My Role:</strong> I led the complete end-to-end implementation of Recharge
+                            subscription platform across 23 ecommerce sites for major consumer packaged goods
+                            companies.</p>
+
+                        <p><strong>Technical Leadership:</strong> I personally managed complex customer migrations of up
+                            to 400,000 subscribers per site, handling payment token transfers, custom widget
+                            development, and strategic optimization.</p>
+
+                        <p><strong>Business Impact:</strong> Through my data-driven approach to frequency optimization,
+                            I achieved a 20% increase in yearly revenue per customer while maintaining zero customer
+                            losses during migrations.</p>
+                    </div>
+
+                    <div class="about-stats">
+                        <div class="stat-row">
+                            <span class="label">Project Duration</span>
+                            <span class="value">3 Years</span>
+                        </div>
+                        <div class="stat-row">
+                            <span class="label">Launch Cycle per Site</span>
+                            <span class="value">1 Month</span>
+                        </div>
+                        <div class="stat-row">
+                            <span class="label">Largest Migration</span>
+                            <span class="value">400K Customers</span>
+                        </div>
+                        <div class="stat-row">
+                            <span class="label">Customer Loss Rate</span>
+                            <span class="value">0%</span>
+                        </div>
+                        <div class="stat-row">
+                            <span class="label">Revenue Optimization</span>
+                            <span class="value">+20%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Challenge Section -->
+            <div class="section">
+                <h2 class="section-title">Technical Challenges I Solved</h2>
+                <p class="section-subtitle">Complex problems requiring innovative solutions and meticulous execution</p>
+
+                <div class="cards-grid">
+                    <div class="challenge-card">
+                        <h3 class="card-title">Payment Token Migration Complexity</h3>
+                        <p class="card-text">I handled the most technically demanding aspect: securely transferring
+                            payment processing tokens from legacy providers to Recharge. This required extensive Excel
+                            data management, multiple validation checkpoints, and precise attention to detail to prevent
+                            customer payment failures.</p>
+                    </div>
+
+                    <div class="challenge-card">
+                        <h3 class="card-title">Large-Scale Customer Base Migrations</h3>
+                        <p class="card-text">I managed migrations of customer bases ranging up to 400,000 subscribers
+                            per store, ensuring zero service interruption. Each migration required careful coordination
+                            of subscription data, billing cycles, and customer communications.</p>
+                    </div>
+
+                    <div class="challenge-card">
+                        <h3 class="card-title">Multi-Site Custom Development</h3>
+                        <p class="card-text">I developed and coded unique subscription widgets for 23 different product
+                            pages, each requiring custom integration approaches while maintaining consistent Recharge
+                            functionality across diverse ecommerce environments.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Solution Section -->
+            <div class="section">
+                <h2 class="section-title">My Strategic Solutions</h2>
+                <p class="section-subtitle">How I delivered measurable results through technical excellence and
+                    strategic thinking</p>
+
+                <div class="cards-grid">
+                    <div class="solution-card">
+                        <h3 class="card-title">Zero-Error Migration Process</h3>
+                        <p class="card-text">I developed foolproof migration protocols ensuring 100% customer retention.
+                            I created comprehensive validation systems and fallback procedures to guarantee
+                            uninterrupted service and maintain customer trust throughout every transition.</p>
+                    </div>
+
+                    <div class="solution-card">
+                        <h3 class="card-title">Custom Widget Architecture</h3>
+                        <p class="card-text">I engineered scalable subscription widgets that integrated seamlessly
+                            across all 23 sites. My development approach ensured consistent functionality while allowing
+                            for brand-specific customizations and optimal user experience.</p>
+                    </div>
+
+                    <div class="solution-card">
+                        <h3 class="card-title">Data-Driven Optimization</h3>
+                        <p class="card-text">I conducted comprehensive A/B testing that revealed a 20% revenue increase
+                            opportunity. By eliminating 3/6-month subscription options in favor of 1/2/3-month cycles, I
+                            significantly improved customer lifetime value across all implementations.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Results Section -->
+        <div class="results-section">
+            <div class="results-content">
+                <h2 class="section-title" style="color: white;">My Measurable Impact</h2>
+                <p class="section-subtitle" style="color: rgba(255,255,255,0.8);">Quantifiable results delivered through
+                    strategic subscription implementation</p>
+
+                <div class="results-grid">
+                    <div class="result-item">
+                        <span class="result-number">$2.4M</span>
+                        <p class="result-label">Annual Recurring Revenue I Generated</p>
+                    </div>
+                    <div class="result-item">
+                        <span class="result-number">400K+</span>
+                        <p class="result-label">Customers I Successfully Migrated</p>
+                    </div>
+                    <div class="result-item">
+                        <span class="result-number">+20%</span>
+                        <p class="result-label">Revenue Increase from My Optimization</p>
+                    </div>
+                    <div class="result-item">
+                        <span class="result-number">0</span>
+                        <p class="result-label">Customer Losses During My Migrations</p>
+                    </div>
+                </div>
+
+                <div class="quote-section">
+                    "My frequency optimization strategy was transformational for every client. By personally analyzing
+                    subscription data and shifting from 3/6-month options to more frequent 1/2/3-month cycles, I not
+                    only increased customer engagement but achieved a remarkable 20% boost in yearly revenue per
+                    subscriber. My technical execution was flawless throughout the entire 3-year program."
+                </div>
+            </div>
+        </div>
+
+        <!-- Brands Section -->
+        <div class="brands-section">
+            <div class="brands-content">
+                <h2 class="section-title">Major Brands That Trusted My Expertise</h2>
+                <p class="section-subtitle">I successfully implemented subscription solutions for these industry-leading
+                    companies</p>
+
+                <div class="brands-grid">
+                    <div class="brand-card">
+                        <div class="brand-name">Quest Nutrition</div>
+                    </div>
+                    <div class="brand-card">
+                        <div class="brand-name">Torani</div>
+                    </div>
+                    <div class="brand-card">
+                        <div class="brand-name">SlimFast</div>
+                    </div>
+                    <div class="brand-card">
+                        <div class="brand-name">Eight O'Clock Coffee</div>
+                    </div>
+                    <div class="brand-card">
+                        <div class="brand-name">Pure Protein</div>
+                    </div>
+                    <div class="brand-card">
+                        <div class="brand-name">Tootsie Roll</div>
+                    </div>
+                </div>
+
+                <div class="recharge-badge">⚡ Powered by Recharge</div>
+            </div>
+        </div>
+
+        <!-- Contact Section -->
+        <div class="contact-section">
+            <div class="contact-content">
+                <h2 class="contact-title">Let's Discuss Your Next Project</h2>
+                <p class="contact-subtitle">Ready to see how I can transform your subscription commerce strategy?</p>
+
+                <div class="contact-grid">
+                    <div class="contact-card">
+                        <h3>📧 Email</h3>
+                        <a href="mailto:ryanpitts26@gmail.com">ryanpitts26@gmail.com</a>
+                    </div>
+                    <div class="contact-card">
+                        <h3>💼 LinkedIn</h3>
+                        <a href="https://www.linkedin.com/in/ryanpitts" target="_blank">linkedin.com/in/ryanpitts</a>
+                    </div>
+                    <div class="contact-card">
+                        <h3>🌐 Portfolio</h3>
+                        <a href="https://ryanppitts.com" target="_blank">ryanppitts.com</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
